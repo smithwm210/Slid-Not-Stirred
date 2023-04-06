@@ -10,9 +10,9 @@ As part of the Game Jam, we were given some fun restrictions:
   
 
 smithwm210 - William Smith
-  -Jacob Antepli
-  -Sarah Bodkin
-  -Zack Adams
+JacobAntepli - Jacob Antepli
+s-bod - Sarah Bodkin
+zadams111 - Zack Adams
 
 Made in Unity
 
