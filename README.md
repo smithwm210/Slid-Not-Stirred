@@ -1,4 +1,4 @@
-# Slid-Not-Stirred
+# Slid Not Stirred
 
 A duel between two bartenders to see who can their client drunk first
 Made for IGDA WPI's Cutthroat Game Jam, whose theme was Don't Stop!
