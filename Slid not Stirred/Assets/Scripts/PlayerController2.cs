@@ -8,7 +8,10 @@ public class PlayerController2 : MonoBehaviour
     private float horizontal;
     [SerializeField] private float speed;
 
-    [SerializeField] private float constant_speed;
+    [SerializeField] private float forwardSpeed;
+    [SerializeField] private float backwardsSpeed;
+
+    [SerializeField] private float constantSpeed;
     [SerializeField] private float jumpingPower;
     private bool isFacingRight = true;
 
@@ -26,8 +29,15 @@ public class PlayerController2 : MonoBehaviour
     
     private void Update()
     {
-        rb.AddForce(new Vector2(constant_speed,0));
+        rb.AddForce(new Vector2(constantSpeed,0));
         horizontal = Input.GetAxisRaw("Horizontal");
+
+        if(Input.GetKeyDown("d")){
+            rb.AddForce(new Vector2(forwardSpeed,0));
+        }
+        if(Input.GetKeyDown("a")){
+            rb.AddForce(new Vector2(backwardsSpeed *-1,0));
+        }
 
         if (IsGrounded())
         {
