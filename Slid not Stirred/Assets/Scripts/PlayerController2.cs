@@ -60,7 +60,7 @@ public class PlayerController2 : MonoBehaviour
         if (coyoteTimeCounter > 0f && jumpBufferCounter > 0f && !isJumping)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-
+            FindObjectOfType<AudioManager>().Play("Jump Sound");
             jumpBufferCounter = 0f;
 
             StartCoroutine(JumpCooldown());
@@ -73,7 +73,7 @@ public class PlayerController2 : MonoBehaviour
             coyoteTimeCounter = 0f;
         }
 
-        Flip();
+        //Flip();
     }
 
     private void FixedUpdate()
