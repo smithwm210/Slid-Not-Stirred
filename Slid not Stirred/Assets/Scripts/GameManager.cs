@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
    
-    private int score = 0;
+    public int score = 0;
 
     private void Awake() {
       DontDestroyOnLoad(this);

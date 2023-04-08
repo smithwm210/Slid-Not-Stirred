@@ -6,12 +6,12 @@ public class PlayerController2 : MonoBehaviour
 {
     // Start is called before the first frame update
     private float horizontal;
-    [SerializeField] private float speed;
-
     [SerializeField] private float forwardSpeed;
     [SerializeField] private float backwardsSpeed;
-
     [SerializeField] private float constantSpeed;
+
+    private float curSpeed;
+
     [SerializeField] private float jumpingPower;
     private bool isFacingRight = true;
 
@@ -26,19 +26,25 @@ public class PlayerController2 : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    
+    private void Start() {
+        curSpeed = constantSpeed;
+    }
     private void Update()
     {
-        rb.AddForce(new Vector2(constantSpeed,0));
+        
         horizontal = Input.GetAxisRaw("Horizontal");
-
+        
         if(Input.GetKeyDown("d")){
-            rb.AddForce(new Vector2(forwardSpeed,0));
+            curSpeed = forwardSpeed;
         }
         if(Input.GetKeyDown("a")){
-            rb.AddForce(new Vector2(backwardsSpeed *-1,0));
+            curSpeed = backwardsSpeed;
         }
-
+        if((Input.GetKeyUp("d") || Input.GetKeyUp("a")) &&
+        (Input.GetKeyDown("d") || Input.GetKeyDown("a")) ){
+            curSpeed = constantSpeed;
+        }
+        
         if (IsGrounded())
         {
             coyoteTimeCounter = coyoteTime;
@@ -72,30 +78,16 @@ public class PlayerController2 : MonoBehaviour
 
             coyoteTimeCounter = 0f;
         }
-
-        //Flip();
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        rb.velocity = new Vector2(curSpeed, rb.velocity.y);
     }
 
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-    }
-
-    private void Flip()
-    {
-        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
-        {
-            Vector3 localScale = transform.localScale;
-            isFacingRight = !isFacingRight;
-            //localScale.x *= -1f;
-            //transform.localScale = localScale;
-           transform.Rotate(0f, 180f, 0f);
-        }
     }
 
     private IEnumerator JumpCooldown()
