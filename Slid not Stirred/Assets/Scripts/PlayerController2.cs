@@ -29,9 +29,11 @@ public class PlayerController2 : MonoBehaviour
     
     private void Update()
     {
+        // constant push
         rb.AddForce(new Vector2(constantSpeed,0));
         horizontal = Input.GetAxisRaw("Horizontal");
 
+        // left and right controls
         if(Input.GetKeyDown("d")){
             rb.AddForce(new Vector2(forwardSpeed,0));
         }
@@ -39,6 +41,7 @@ public class PlayerController2 : MonoBehaviour
             rb.AddForce(new Vector2(backwardsSpeed *-1,0));
         }
 
+        // jump controls
         if (IsGrounded())
         {
             coyoteTimeCounter = coyoteTime;
