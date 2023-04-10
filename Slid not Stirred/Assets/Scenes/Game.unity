@@ -1318,53 +1318,60 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2067217225
-GameObject:
+--- !u!1001 &2570366821514369094
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2067217227}
-  - component: {fileID: 2067217226}
-  m_Layer: 0
-  m_Name: Audio Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2067217226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2067217225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e68f620275d2bb4a9eceb3a1c665d48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: Jump Sound
-    clip: {fileID: 8300000, guid: 431103d3bb16f2f4785614bf15e552e4, type: 3}
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
---- !u!4 &2067217227
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2067217225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.977226, y: -0.98660594, z: 0.5200722}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2570366819485836045, guid: de0b7510c5678f9459e32552dea61436, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570366819485836045, guid: de0b7510c5678f9459e32552dea61436, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -21.977226
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570366819485836045, guid: de0b7510c5678f9459e32552dea61436, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.98660594
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570366819485836045, guid: de0b7510c5678f9459e32552dea61436, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5200722
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570366819485836045, guid: de0b7510c5678f9459e32552dea61436, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570366819485836045, guid: de0b7510c5678f9459e32552dea61436, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570366819485836045, guid: de0b7510c5678f9459e32552dea61436, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570366819485836045, guid: de0b7510c5678f9459e32552dea61436, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570366819485836045, guid: de0b7510c5678f9459e32552dea61436, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570366819485836045, guid: de0b7510c5678f9459e32552dea61436, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570366819485836045, guid: de0b7510c5678f9459e32552dea61436, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570366819485836047, guid: de0b7510c5678f9459e32552dea61436, type: 3}
+      propertyPath: m_Name
+      value: Audio Manager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: de0b7510c5678f9459e32552dea61436, type: 3}
