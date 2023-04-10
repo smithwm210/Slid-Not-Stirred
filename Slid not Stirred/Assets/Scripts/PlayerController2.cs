@@ -13,7 +13,6 @@ public class PlayerController2 : MonoBehaviour
     private float curSpeed;
 
     [SerializeField] private float jumpingPower;
-    private bool isFacingRight = true;
 
     private bool isJumping;
 
