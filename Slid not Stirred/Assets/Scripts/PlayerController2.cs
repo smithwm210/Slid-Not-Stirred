@@ -40,7 +40,7 @@ public class PlayerController2 : MonoBehaviour
             curSpeed = backwardsSpeed;
         }
         if((Input.GetKeyUp("d") || Input.GetKeyUp("a")) &&
-        (Input.GetKeyDown("d") || Input.GetKeyDown("a")) ){
+        (!Input.GetKeyDown("d") || !Input.GetKeyDown("a")) ){
             curSpeed = constantSpeed;
         }
         
