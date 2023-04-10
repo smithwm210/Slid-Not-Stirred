@@ -32,7 +32,7 @@ public class CountDownController : MonoBehaviour
                 timerDis.text = "Go!";
             }
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.75f);
 
             countDownTimer--;
 
