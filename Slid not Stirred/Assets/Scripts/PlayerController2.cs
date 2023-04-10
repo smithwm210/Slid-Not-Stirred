@@ -5,11 +5,11 @@ using UnityEngine;
 public class PlayerController2 : MonoBehaviour
 {
     // Start is called before the first frame update
+    private bool gameStarted;
     private float horizontal;
     [SerializeField] private float forwardSpeed;
     [SerializeField] private float backwardsSpeed;
     [SerializeField] private float constantSpeed;
-
     private float curSpeed;
 
     [SerializeField] private float jumpingPower;
@@ -27,7 +27,10 @@ public class PlayerController2 : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     private void Start() {
         curSpeed = constantSpeed;
+        GetComponent<PlayerController2>().enabled = false;
     }
+
+    
     private void Update()
     {
         
@@ -39,10 +42,13 @@ public class PlayerController2 : MonoBehaviour
         if(Input.GetKeyDown("a")){
             curSpeed = backwardsSpeed;
         }
+        
         if((Input.GetKeyUp("d") || Input.GetKeyUp("a")) &&
         (!Input.GetKeyDown("d") || !Input.GetKeyDown("a")) ){
             curSpeed = constantSpeed;
         }
+        
+      
         
         if (IsGrounded())
         {
