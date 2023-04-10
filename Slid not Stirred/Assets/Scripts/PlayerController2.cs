@@ -25,7 +25,11 @@ public class PlayerController2 : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    private void Start() {
+
+    //private int totalHealth = 3;
+
+    private void Start()
+    {
         curSpeed = constantSpeed;
         GetComponent<PlayerController2>().enabled = false;
     }
@@ -108,7 +112,6 @@ public class PlayerController2 : MonoBehaviour
         {
             Debug.Log("Collided");
             StartCoroutine(LoseHealth());
-
         }
     }
 
@@ -116,11 +119,37 @@ public class PlayerController2 : MonoBehaviour
     {
         //brief invincibility (layer 6 is player, 7 is obstacle)
         Physics2D.IgnoreLayerCollision(6, 7, true);
+
+        //play getting hit sound
+        //FindObjectOfType<AudioManager>().Play("Hit Obstacle");
+
+        //spill drink animation
+
+        //decrement health bar
+        // totalHealth--;
+        // switch(totalHealth)
+        // {
+        //     case 2:
+        //         //change health bar sprite to 2/3
+        //         break;
+        //     case 1:
+        //         //change health bar sprite to 1/3
+        //         //maybe with something else for polish, like slightly red?
+        //         break;
+        //     case 0:
+        //         //change to empty glass 0/3
+        //         //what happens when it's empty?
+        //         break;
+        //     default:
+        //         break;
+        // }
+         
+
+        //apply leftward force? (decrease their horiz speed)
+
         yield return new WaitForSeconds(1f);
         Physics2D.IgnoreLayerCollision(6, 7, false);
         
-        //decrease horizontal velocity?
-        //spill drink animation
-        //flash sprite on and off for a second
+
     }
 }

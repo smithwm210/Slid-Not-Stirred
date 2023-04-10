@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
      else if(score >= 3){
       score = 0;
      }
-     Debug.Log(score);
+     Debug.Log("Score: " + score);
 
    }
 }
