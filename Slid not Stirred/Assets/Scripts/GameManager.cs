@@ -7,9 +7,21 @@ public class GameManager : MonoBehaviour
 {
    
     public int score = 0;
-
+    public static GameManager instance;
     private void Awake() {
+       if (instance == null)
+            instance = this;
+        else{
+
+            Destroy(gameObject);
+            return;
+        }
+
+        
+
+
       DontDestroyOnLoad(this);
+
     }
     public void Restart(){
      
@@ -20,7 +32,7 @@ public class GameManager : MonoBehaviour
      else if(score >= 3){
       score = 0;
      }
-     Debug.Log("Score: " + score);
+     Debug.Log(score);
 
    }
 }
