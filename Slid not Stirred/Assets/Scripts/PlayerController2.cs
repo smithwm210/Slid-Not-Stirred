@@ -27,7 +27,7 @@ public class PlayerController2 : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     private void Start() {
         curSpeed = constantSpeed;
-        //GetComponent<PlayerController2>().enabled = false;
+        GetComponent<PlayerController2>().enabled = false;
     }
 
     
