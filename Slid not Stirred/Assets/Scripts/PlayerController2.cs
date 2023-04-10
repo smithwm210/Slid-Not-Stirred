@@ -101,4 +101,26 @@ public class PlayerController2 : MonoBehaviour
         yield return new WaitForSeconds(.65f);
         isJumping = false;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Obstacle")
+        {
+            Debug.Log("Collided");
+            StartCoroutine(LoseHealth());
+
+        }
+    }
+
+    private IEnumerator LoseHealth()
+    {
+        //brief invincibility (layer 6 is player, 7 is obstacle)
+        Physics2D.IgnoreLayerCollision(6, 7, true);
+        yield return new WaitForSeconds(1f);
+        Physics2D.IgnoreLayerCollision(6, 7, false);
+        
+        //decrease horizontal velocity?
+        //spill drink animation
+        //flash sprite on and off for a second
+    }
 }
