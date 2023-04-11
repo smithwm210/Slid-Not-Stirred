@@ -145,7 +145,7 @@ public class PlayerController2 : MonoBehaviour
 
         //apply leftward force? (decrease their horiz speed)
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.75f);
         Physics2D.IgnoreLayerCollision(6, 7, false);
         
 
