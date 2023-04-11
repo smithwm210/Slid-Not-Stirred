@@ -52,8 +52,6 @@ public class PlayerController2 : MonoBehaviour
             curSpeed = constantSpeed;
         }
         
-      
-        
         if (IsGrounded())
         {
             coyoteTimeCounter = coyoteTime;
