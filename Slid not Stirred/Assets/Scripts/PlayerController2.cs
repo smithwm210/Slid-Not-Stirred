@@ -12,7 +12,16 @@ public class PlayerController2 : MonoBehaviour
     [SerializeField] private float constantSpeed;
     private float curSpeed;
 
+
+
     [SerializeField] private float jumpingPower;
+
+    [SerializeField] private float dashPower;
+    [SerializeField] private float dashTime;
+    [SerializeField] private float dashCooldown;
+    private bool canDash = true;
+    private bool isDashing;
+
 
     private bool isJumping;
 
@@ -37,8 +46,14 @@ public class PlayerController2 : MonoBehaviour
     
     private void Update()
     {
-        
+        if(isDashing){
+            return;
+        }
         horizontal = Input.GetAxisRaw("Horizontal");
+
+        if(Input.GetKeyDown("c") && canDash){
+           StartCoroutine(Dash());
+        }
         
         if(Input.GetKeyDown("d")){
             curSpeed = forwardSpeed;
@@ -89,6 +104,9 @@ public class PlayerController2 : MonoBehaviour
 
     private void FixedUpdate()
     {
+         if(isDashing){
+            return;
+        }
         rb.velocity = new Vector2(curSpeed, rb.velocity.y);
     }
 
@@ -113,6 +131,22 @@ public class PlayerController2 : MonoBehaviour
         }
     }
 
+    //dashing mechanic
+    private IEnumerator Dash(){
+
+        canDash = false;
+        isDashing = true;
+        float originalGravScale = rb.gravityScale;
+        rb.gravityScale = 0;
+        rb.velocity = (new Vector2(transform.localScale.x *dashPower,0f));
+        yield return new WaitForSeconds(dashTime);
+        rb.gravityScale = originalGravScale;
+        isDashing = false;
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
+    }
+
+    
     private IEnumerator LoseHealth()
     {
         //brief invincibility (layer 6 is player, 7 is obstacle)
