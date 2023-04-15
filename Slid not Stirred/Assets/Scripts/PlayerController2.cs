@@ -51,18 +51,19 @@ public class PlayerController2 : MonoBehaviour
         }
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if(Input.GetKeyDown("c") && canDash){
+        if(Input.GetButtonDown("Dash") && canDash){
            StartCoroutine(Dash());
+           
         }
         
-        if(Input.GetKeyDown("d")){
+        if(Input.GetKeyDown("d") || horizontal > 0){
             curSpeed = forwardSpeed;
         }
-        if(Input.GetKeyDown("a")){
+        if(Input.GetKeyDown("a") || horizontal < 0){
             curSpeed = backwardsSpeed;
         }
         
-        if((Input.GetKeyUp("d") || Input.GetKeyUp("a")) &&
+        if((Input.GetKeyUp("d") || Input.GetKeyUp("a") || horizontal == 0) &&
         (!Input.GetKeyDown("d") && !Input.GetKeyDown("a")) ){
             curSpeed = constantSpeed;
         }

@@ -8614,9 +8614,9 @@ MonoBehaviour:
   backwardsSpeed: 7
   constantSpeed: 10
   jumpingPower: 34
-  dashPower: 10
+  dashPower: 22
   dashTime: 0.2
-  dashCooldown: 5
+  dashCooldown: 1
   rb: {fileID: 708650513}
   groundCheck: {fileID: 1685215501}
   groundLayer:
