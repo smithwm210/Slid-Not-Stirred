@@ -8,6 +8,15 @@ public class AudioManager : MonoBehaviour
 {
     public Sounds[] sounds;
     public static AudioManager instance;
+
+
+
+    private void Start() {
+        PlayLoop("Main Music");
+    }
+
+
+
     private void Awake() {
 
         if (instance == null)
@@ -23,13 +32,12 @@ public class AudioManager : MonoBehaviour
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
 
+          
 
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
 
-            if(PauseManager.GameIsPaused){
-                 s.source.pitch *= .5f;
-            }
+          
         }
     }
 

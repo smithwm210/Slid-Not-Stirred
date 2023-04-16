@@ -7,7 +7,15 @@ public class PauseManager : MonoBehaviour
 {
     public static bool GameIsPaused = false;
 
+    public static bool GameIsDrunk = false;
+
+    public GameObject resumeText;
+    public GameObject pauseText;
+    public GameObject muteText;
+
     public GameObject pauseMenuUI;
+
+    public GameObject drunkScreen;
 
     void Update()
     {
@@ -40,5 +48,24 @@ public class PauseManager : MonoBehaviour
     {
         Debug.Log("Quitting game...");
         Application.Quit();
+    }
+
+    public void DrunkMute(){
+        
+        if(!GameIsDrunk){
+            drunkScreen.SetActive(true);
+            resumeText.SetActive(false);
+            pauseText.SetActive(false);
+            muteText.SetActive(false);
+            GameIsDrunk = true;
+        }
+        else{
+            drunkScreen.SetActive(false);
+            resumeText.SetActive(true);
+            pauseText.SetActive(true);
+            muteText.SetActive(true);
+            GameIsDrunk = false;
+        }
+        
     }
 }
