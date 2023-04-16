@@ -17,7 +17,8 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        
+        FindObjectOfType<AudioManager>().PlayLoop("Main Music");
+
 
 
       DontDestroyOnLoad(this);

@@ -23,8 +23,13 @@ public class AudioManager : MonoBehaviour
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
 
+
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
+
+            if(PauseManager.GameIsPaused){
+                 s.source.pitch *= .5f;
+            }
         }
     }
 
@@ -34,4 +39,11 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
         
     }
+    public void PlayLoop (string name){
+        Sounds s = Array.Find(sounds,sound => sound.name == name);
+        s.source.loop = true;
+        s.source.Play();
+        
+    }
 }
+
