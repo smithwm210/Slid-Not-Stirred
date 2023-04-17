@@ -16,6 +16,8 @@ public class PlayerController2 : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+    //private SpriteRenderer rend;
+
     private float curConstant;
     private float curForward;
     private float curBackwards;
@@ -35,6 +37,7 @@ public class PlayerController2 : MonoBehaviour
     public int maxHealth = 10;
     private int curHealth;
 
+    //private bool isFlashing;
  
 
     private void Start()
@@ -162,37 +165,40 @@ public class PlayerController2 : MonoBehaviour
         //play getting hit sound
         //FindObjectOfType<AudioManager>().Play("Hit Obstacle");
 
-        //spill drink animation
+        //flash the player sprite
+        StartCoroutine(FlashRoutine());
+        
+        //play the spill drink animation
 
         //decrement health bar
          curHealth -= 2;
          healthBar.SetHealth(curHealth);
-         
-        // switch(totalHealth)
-        // {
-        //     case 2:
-        //         //change health bar sprite to 2/3
-        //         break;
-        //     case 1:
-        //         //change health bar sprite to 1/3
-        //         //maybe with something else for polish, like slightly red?
-        //         break;
-        //     case 0:
-        //         //change to empty glass 0/3
-        //         //what happens when it's empty?
-        //         break;
-        //     default:
-        //         break;
-        // }
-         
 
-        //apply leftward force? (decrease their horiz speed)
-
-        yield return new WaitForSeconds(0.75f);
+        yield return new WaitForSeconds(1.0f);
         Physics2D.IgnoreLayerCollision(6, 7, false);
-        
-
     }
+
+    private IEnumerator FlashRoutine()
+    {
+        GetComponent<SpriteRenderer>().enabled = false;
+        yield return new WaitForSeconds(0.20f);
+        GetComponent<SpriteRenderer>().enabled = true;
+        yield return new WaitForSeconds(0.20f);
+        GetComponent<SpriteRenderer>().enabled = false;
+        yield return new WaitForSeconds(0.15f);
+        GetComponent<SpriteRenderer>().enabled = true;
+        yield return new WaitForSeconds(0.15f);
+        GetComponent<SpriteRenderer>().enabled = false;
+        yield return new WaitForSeconds(0.10f);
+        GetComponent<SpriteRenderer>().enabled = true;
+        yield return new WaitForSeconds(0.10f);
+        GetComponent<SpriteRenderer>().enabled = false;
+        yield return new WaitForSeconds(0.05f);
+        GetComponent<SpriteRenderer>().enabled = true;
+        yield return new WaitForSeconds(0.05f);
+    }
+
+
     public void IncreaseSpeed(){
 
         for(int i = 1; i < FindObjectOfType<GameManager>().round; i++){
