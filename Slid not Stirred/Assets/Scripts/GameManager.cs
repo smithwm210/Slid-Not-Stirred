@@ -21,7 +21,11 @@ public class GameManager : MonoBehaviour
         }
 
       DontDestroyOnLoad(this);
+      
+    }
 
+    private void Start() {
+      FindObjectOfType<AudioManager>().PlayLoop("Main Music");
     }
 
     public void Restart(){
@@ -29,10 +33,6 @@ public class GameManager : MonoBehaviour
       if(round < 3){
         round++;
        
-      }
-      else if(round >= 3){
-        round = 1;
-        EndGame();
       }
       Debug.Log(round);
     }
@@ -45,7 +45,9 @@ public class GameManager : MonoBehaviour
    }
 
    public void EndGame(){
+    round = 1;
     wins = 0;
     losses = 0;
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
    }
 }

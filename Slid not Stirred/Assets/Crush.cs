@@ -10,15 +10,16 @@ public class Crush : MonoBehaviour
     public Transform up;
     public Transform down;
     bool chop;
-
+    
     // Update is called once per frame
+    
     void Update()
     {
-        if(transform.position.y >= up.position.y){
+        if(transform.position.y >= up.position.y  && (transform.position.x >= up.position.x || transform.position.x <= up.position.x )){
             chop = true;
         }
 
-        if(transform.position.y <= down.position.y){
+        if(transform.position.y <= down.position.y && (transform.position.x >= up.position.x || transform.position.x <= up.position.x)){
             chop = false;
         }
 

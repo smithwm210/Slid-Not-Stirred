@@ -50,3 +50,23 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  - name: Main Music
+    clip: {fileID: 8300000, guid: 6ae7d1c9f3d5e684ca85bde3f16aa3e0, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Dash Sound
+    clip: {fileID: 8300000, guid: c6a2e39f53b481d40abf1aa9da2003c7, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Hit Sound
+    clip: {fileID: 8300000, guid: 39f860f35682d304281c5aa0969c830d, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Menu Music
+    clip: {fileID: 8300000, guid: a77eb3ca9f98b874d8b84a93eeb09f5b, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}

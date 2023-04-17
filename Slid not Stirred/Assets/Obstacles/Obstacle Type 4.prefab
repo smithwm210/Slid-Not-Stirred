@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6509796692675539672}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Left Beer Endpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6509796692968482024}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Starting Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6509796693076301021}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Right Beer End Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6509796693125344724}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Starting Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6509796693536124042}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Obstacle Type 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}

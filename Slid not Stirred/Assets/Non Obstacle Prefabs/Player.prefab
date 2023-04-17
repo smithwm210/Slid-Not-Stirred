@@ -180,7 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incrimentingSpeed: 4
   forwardSpeed: 13
-  backwardsSpeed: 7
+  backwardsSpeed: 6
   constantSpeed: 10
   jumpingPower: 34
   dashPower: 22
@@ -191,5 +191,6 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  subtitles: {fileID: 0}
   healthBar: {fileID: 0}
   maxHealth: 6

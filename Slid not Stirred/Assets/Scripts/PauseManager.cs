@@ -50,6 +50,10 @@ public class PauseManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void LoadMenu(){
+        SceneManager.LoadScene(0);
+    }
+
     public void DrunkMute(){
         
         if(!GameIsDrunk){

@@ -64,7 +64,7 @@ public class PlayerController2 : MonoBehaviour
         }
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if(Input.GetButtonDown("Dash") && canDash && curHealth > 1){
+        if(Input.GetButtonDown("Dash") && canDash && curHealth >= 1){
            FindObjectOfType<AudioManager>().Play("Dash Sound"); 
            subtitles.text = "cominhos e uvas";
            StartCoroutine(Dash());

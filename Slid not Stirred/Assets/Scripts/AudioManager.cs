@@ -10,13 +10,6 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
 
 
-
-    private void Start() {
-        PlayLoop("Main Music");
-    }
-
-
-
     private void Awake() {
 
         if (instance == null)
@@ -26,6 +19,7 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+        DontDestroyOnLoad(this);
 
 
         foreach(Sounds s in sounds){
@@ -45,13 +39,11 @@ public class AudioManager : MonoBehaviour
     public void Play (string name){
         Sounds s = Array.Find(sounds,sound => sound.name == name);
         s.source.Play();
-        
     }
     public void PlayLoop (string name){
         Sounds s = Array.Find(sounds,sound => sound.name == name);
         s.source.loop = true;
         s.source.Play();
-        
     }
 }
 

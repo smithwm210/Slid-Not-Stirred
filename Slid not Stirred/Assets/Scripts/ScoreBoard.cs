@@ -6,11 +6,15 @@ using TMPro;
 
 public class ScoreBoard : MonoBehaviour
 {
-    public TextMeshProUGUI curScore;
+    public TextMeshProUGUI curRound;
+    public TextMeshProUGUI curWins;
+    public TextMeshProUGUI curLosses;
 
     // Update is called once per frame
     void Update()
     {
-        curScore.text = "Round: " + FindObjectOfType<GameManager>().round.ToString();
+        curRound.text = "Round: " + FindObjectOfType<GameManager>().round.ToString();
+        curWins.text = "Wins: " +  FindObjectOfType<GameManager>().wins.ToString();
+        curLosses.text = "Losses: " +  FindObjectOfType<GameManager>().losses.ToString();
     }
 }
