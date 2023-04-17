@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObstacleType3 : MonoBehaviour
 {
+    public float attackSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -11,8 +12,5 @@ public class ObstacleType3 : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
