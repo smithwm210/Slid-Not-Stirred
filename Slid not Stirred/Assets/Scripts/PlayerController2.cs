@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController2 : MonoBehaviour
 {
@@ -15,6 +17,8 @@ public class PlayerController2 : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+
+    public TextMeshProUGUI subtitles;
 
     //private SpriteRenderer rend;
 
@@ -61,7 +65,10 @@ public class PlayerController2 : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
 
         if(Input.GetButtonDown("Dash") && canDash && curHealth > 1){
+           FindObjectOfType<AudioManager>().Play("Dash Sound"); 
+           subtitles.text = "cominhos e uvas";
            StartCoroutine(Dash());
+
            
         }
         
@@ -98,6 +105,7 @@ public class PlayerController2 : MonoBehaviour
         if (coyoteTimeCounter > 0f && jumpBufferCounter > 0f && !isJumping)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            subtitles.text = "Sliding window";
             FindObjectOfType<AudioManager>().Play("Jump Sound");
             jumpBufferCounter = 0f;
             StartCoroutine(JumpCooldown());
