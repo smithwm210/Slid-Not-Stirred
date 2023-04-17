@@ -11,7 +11,6 @@ public class ScoreBoard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        curScore.text = "Score: " 
-        + FindObjectOfType<GameManager>().score.ToString();
+        curScore.text = "Round: " + FindObjectOfType<GameManager>().round.ToString();
     }
 }
