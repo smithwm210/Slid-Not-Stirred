@@ -68,13 +68,12 @@ public class PlayerController2 : MonoBehaviour
            FindObjectOfType<AudioManager>().Play("Dash Sound"); 
            subtitles.text = "cominhos e uvas";
            StartCoroutine(Dash());
-
-           
         }
         
         if(Input.GetKeyDown("d") || horizontal > 0){
             curSpeed = curForward;
         }
+        
         if(Input.GetKeyDown("a") || horizontal < 0){
             curSpeed = curBackwards;
         }
@@ -171,9 +170,11 @@ public class PlayerController2 : MonoBehaviour
         Physics2D.IgnoreLayerCollision(6, 7, true);
 
         //play getting hit sound
-        //FindObjectOfType<AudioManager>().Play("Hit Obstacle");
+        FindObjectOfType<AudioManager>().Play("Hit Sound"); 
+        subtitles.text = "The house collapsed and water came out.";
 
         //flash the player sprite
+
         StartCoroutine(FlashRoutine());
         
         //play the spill drink animation

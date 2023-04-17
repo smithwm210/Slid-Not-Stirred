@@ -728,7 +728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6423203040951795279, guid: 0a3642892bbf87c48a91406cba920028, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15
+      value: 13.110001
       objectReference: {fileID: 0}
     - target: {fileID: 6423203040951795279, guid: 0a3642892bbf87c48a91406cba920028, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1045,7 +1045,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2570366819485836044, guid: de0b7510c5678f9459e32552dea61436, type: 3}
       propertyPath: sounds.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2570366819485836044, guid: de0b7510c5678f9459e32552dea61436, type: 3}
       propertyPath: sounds.Array.data[1].clip
@@ -1064,6 +1064,14 @@ PrefabInstance:
       value: Dash Sound
       objectReference: {fileID: 0}
     - target: {fileID: 2570366819485836044, guid: de0b7510c5678f9459e32552dea61436, type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 39f860f35682d304281c5aa0969c830d, type: 3}
+    - target: {fileID: 2570366819485836044, guid: de0b7510c5678f9459e32552dea61436, type: 3}
+      propertyPath: sounds.Array.data[3].name
+      value: Hit Sound
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570366819485836044, guid: de0b7510c5678f9459e32552dea61436, type: 3}
       propertyPath: sounds.Array.data[1].pitch
       value: 1
       objectReference: {fileID: 0}
@@ -1072,11 +1080,19 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2570366819485836044, guid: de0b7510c5678f9459e32552dea61436, type: 3}
+      propertyPath: sounds.Array.data[3].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570366819485836044, guid: de0b7510c5678f9459e32552dea61436, type: 3}
       propertyPath: sounds.Array.data[1].volume
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2570366819485836044, guid: de0b7510c5678f9459e32552dea61436, type: 3}
       propertyPath: sounds.Array.data[2].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570366819485836044, guid: de0b7510c5678f9459e32552dea61436, type: 3}
+      propertyPath: sounds.Array.data[3].volume
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2570366819485836045, guid: de0b7510c5678f9459e32552dea61436, type: 3}
@@ -1428,7 +1444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6423203040951795279, guid: 0a3642892bbf87c48a91406cba920028, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20
+      value: 18.11
       objectReference: {fileID: 0}
     - target: {fileID: 6423203040951795279, guid: 0a3642892bbf87c48a91406cba920028, type: 3}
       propertyPath: m_LocalPosition.y
