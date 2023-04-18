@@ -6,9 +6,9 @@ using UnityEngine.Audio;
 public class MenuManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        FindObjectOfType<AudioManager>().PlayLoop("Menu Music");
+       
     }
 
    

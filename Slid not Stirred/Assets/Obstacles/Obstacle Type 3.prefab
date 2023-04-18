@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31bdd7af670e4aa4e9a86d9c5636b3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSpeed: 0
 --- !u!95 &5142932009853225477
 Animator:
   serializedVersion: 5
@@ -196,7 +197,7 @@ GameObject:
   - component: {fileID: 5142932011292190380}
   m_Layer: 0
   m_Name: beer_sprite 1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -282,7 +283,7 @@ GameObject:
   - component: {fileID: 5142932011404195715}
   m_Layer: 7
   m_Name: Hitboxes
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class EndPoint : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other) {
-        if(FindObjectOfType<GameManager>().round < 3){
+        if(FindObjectOfType<GameManager>().round < 4){
             if(FindObjectOfType<PlayerController2>().GetHealth() <= 0){
                 FindObjectOfType<GameManager>().Lose();  
             }
@@ -14,9 +14,10 @@ public class EndPoint : MonoBehaviour
             }
             FindObjectOfType<GameManager>().Restart();
         }
-
-        if(FindObjectOfType<GameManager>().round > 3){
-            FindObjectOfType<GameManager>().EndGame();
+        if(FindObjectOfType<GameManager>().round >= 4){
+           FindObjectOfType<GameManager>().EndGame(); 
         }
+
+        
     }
 }

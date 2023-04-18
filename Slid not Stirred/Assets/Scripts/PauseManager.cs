@@ -12,6 +12,7 @@ public class PauseManager : MonoBehaviour
     public GameObject resumeText;
     public GameObject pauseText;
     public GameObject muteText;
+    public GameObject menuText;
 
     public GameObject pauseMenuUI;
 
@@ -52,6 +53,7 @@ public class PauseManager : MonoBehaviour
 
     public void LoadMenu(){
         SceneManager.LoadScene(0);
+        Resume();
     }
 
     public void DrunkMute(){
@@ -61,6 +63,7 @@ public class PauseManager : MonoBehaviour
             resumeText.SetActive(false);
             pauseText.SetActive(false);
             muteText.SetActive(false);
+            menuText.SetActive(false);
             GameIsDrunk = true;
         }
         else{
@@ -68,6 +71,7 @@ public class PauseManager : MonoBehaviour
             resumeText.SetActive(true);
             pauseText.SetActive(true);
             muteText.SetActive(true);
+            menuText.SetActive(true);
             GameIsDrunk = false;
         }
         

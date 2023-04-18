@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf660b2cd6c9f56479ee813a6f212f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upspeed: 12
-  downspeed: 30
+  upspeed: 10
+  downspeed: 20
   up: {fileID: 6423203040554450255}
   down: {fileID: 6423203040951795279}

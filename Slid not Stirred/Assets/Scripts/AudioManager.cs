@@ -26,13 +26,15 @@ public class AudioManager : MonoBehaviour
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
 
-          
-
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
 
           
         }
+    }
+
+    private void Start() {
+        PlayLoop("Main Music");
     }
 
 
@@ -44,6 +46,10 @@ public class AudioManager : MonoBehaviour
         Sounds s = Array.Find(sounds,sound => sound.name == name);
         s.source.loop = true;
         s.source.Play();
+    }
+    public void Stop(string name){
+        Sounds s = Array.Find(sounds,sound => sound.name == name);
+        s.source.Stop();
     }
 }
 

@@ -15,7 +15,7 @@ TagManager:
   - Player
   - Obstacle
   - Background
-  - 
+  - Cutscene
   - 
   - 
   - 
@@ -47,6 +47,9 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Cutscene
+    uniqueID: 702149873
     locked: 0
   - name: Pause Screen
     uniqueID: 1437516825

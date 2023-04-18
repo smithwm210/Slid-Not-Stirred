@@ -10,6 +10,8 @@ public class ScoreBoard : MonoBehaviour
     public TextMeshProUGUI curWins;
     public TextMeshProUGUI curLosses;
 
+    public GameObject endingAnimation;
+
     // Update is called once per frame
     void Update()
     {

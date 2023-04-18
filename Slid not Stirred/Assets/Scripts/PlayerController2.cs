@@ -40,21 +40,13 @@ public class PlayerController2 : MonoBehaviour
 
     public int maxHealth = 10;
     private int curHealth;
+    public static PlayerController2 instance;
 
     //private bool isFlashing;
- 
-
     private void Start()
-    {
-        curHealth = maxHealth;
-        curConstant = constantSpeed;
-        curBackwards = backwardsSpeed;
-        curForward = forwardSpeed;
-        curSpeed = curConstant;
+    {   
         healthBar.SetMaxHealth(maxHealth);
-        IncreaseSpeed();
-
-        GetComponent<PlayerController2>().enabled = false;
+        curHealth = maxHealth;
     }
 
     private void Update()
@@ -71,16 +63,16 @@ public class PlayerController2 : MonoBehaviour
         }
         
         if(Input.GetKeyDown("d") || horizontal > 0){
-            curSpeed = curForward;
+            curSpeed = forwardSpeed;
         }
         
         if(Input.GetKeyDown("a") || horizontal < 0){
-            curSpeed = curBackwards;
+            curSpeed = backwardsSpeed;
         }
         
         if((Input.GetKeyUp("d") || Input.GetKeyUp("a") || horizontal == 0) &&
         (!Input.GetKeyDown("d") && !Input.GetKeyDown("a")) ){
-            curSpeed = curConstant;
+            curSpeed = constantSpeed;
         }
         
         if (IsGrounded())
@@ -100,7 +92,6 @@ public class PlayerController2 : MonoBehaviour
         {
             jumpBufferCounter -= Time.deltaTime;
         }
-
         if (coyoteTimeCounter > 0f && jumpBufferCounter > 0f && !isJumping)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
@@ -109,7 +100,6 @@ public class PlayerController2 : MonoBehaviour
             jumpBufferCounter = 0f;
             StartCoroutine(JumpCooldown());
         }
-
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
@@ -141,7 +131,6 @@ public class PlayerController2 : MonoBehaviour
     {
         if (collision.tag == "Obstacle")
         {
-            Debug.Log("Collided");
             StartCoroutine(LoseHealth());
         }
     }
@@ -209,11 +198,10 @@ public class PlayerController2 : MonoBehaviour
 
 
     public void IncreaseSpeed(){
-
         for(int i = 1; i < FindObjectOfType<GameManager>().round; i++){
-            curConstant += incrimentingSpeed;
-            curForward += incrimentingSpeed;
-            curBackwards += incrimentingSpeed;
+            constantSpeed += incrimentingSpeed;
+            forwardSpeed += incrimentingSpeed;
+            backwardsSpeed += incrimentingSpeed;
         }
     }
 
