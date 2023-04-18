@@ -24,7 +24,6 @@ public class SlideLeft : MonoBehaviour
 
         if(slide){
             transform.position = Vector3.Slerp(transform.position,endpoint.position, forwardSpeed* Time.deltaTime);
-           
         }
         
         if(!slide){

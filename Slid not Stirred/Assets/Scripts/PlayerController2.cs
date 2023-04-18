@@ -20,8 +20,6 @@ public class PlayerController2 : MonoBehaviour
 
     public TextMeshProUGUI subtitles;
 
-    //private SpriteRenderer rend;
-
     private float curConstant;
     private float curForward;
     private float curBackwards;
@@ -127,13 +125,14 @@ public class PlayerController2 : MonoBehaviour
         isJumping = false;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Obstacle")
         {
             StartCoroutine(LoseHealth());
         }
     }
+
 
     //dashing mechanic
     private IEnumerator Dash(){
