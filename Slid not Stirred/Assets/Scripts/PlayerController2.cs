@@ -172,7 +172,7 @@ public class PlayerController2 : MonoBehaviour
          curHealth -= 2;
          healthBar.SetHealth(curHealth);
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(1.3f);
         Physics2D.IgnoreLayerCollision(6, 7, false);
     }
 
