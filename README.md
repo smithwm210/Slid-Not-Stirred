@@ -1,13 +1,13 @@
 # Slid Not Stirred
 
-A duel between two bartenders to see who can their client drunk first
+A loyal glass of alcohol must dodge obstacles to get back to the bartender
 
 
-Made for IGDA WPI's Cutthroat Game Jam, whose theme was Don't Stop!
+The winning game of IGDA WPI's Cutthroat Game Jam, whose theme was Don't Stop!
 As part of the Game Jam, we were given some fun restrictions:
   - All sound effects had to originate from our voices
   - Nothing in the game could be harmed
-  - A mute button that makes the screen go black and continue to play sounds
+  - Include a mute button that makes the screen go black
   - Poorly translated subtitles for every sound effect
   - A prominent animation made in MS paint
   
