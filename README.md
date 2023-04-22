@@ -12,13 +12,7 @@ As part of the Game Jam, we were given some fun restrictions:
   - A prominent animation made in MS paint
   
   
-Jacob Antepli (JacobAntepli)
-
-William Smith (smithwm210)
-
-Sarah Bodkin (s-bod)
-
-Zack Adams (zadams111)
+Jacob Antepli (JacobAntepli) was the lead programmer and designer. William Smith (smithwm210) helped with programming and level design. Sarah Bodkin (s-bod) and Zack Adams (zadams111) were the lead artists.
 
 
 Made in Unity
