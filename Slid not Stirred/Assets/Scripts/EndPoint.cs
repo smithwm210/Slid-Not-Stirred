@@ -12,12 +12,6 @@ public class EndPoint : MonoBehaviour
             else{
                 FindObjectOfType<GameManager>().Win();
             }
-            FindObjectOfType<GameManager>().Restart();
         }
-        if(FindObjectOfType<GameManager>().round >= 4){
-           FindObjectOfType<GameManager>().EndGame(); 
-        }
-
-        
     }
 }

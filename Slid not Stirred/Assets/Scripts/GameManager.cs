@@ -32,11 +32,11 @@ public class GameManager : MonoBehaviour
       }
     }
    public void Win(){
-    wins++;
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
    }
 
    public void Lose(){
-    losses++;
+    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
    }
 
    public void EndGame(){

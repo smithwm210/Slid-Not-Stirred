@@ -10,7 +10,7 @@ public class MenuControls : MonoBehaviour
     }
 
     public void LoadLSelect(){
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
     }
     public void LoadMenu(){
         SceneManager.LoadScene(0);
@@ -23,6 +23,9 @@ public class MenuControls : MonoBehaviour
     }
     public void LoadLevel3(){
         SceneManager.LoadScene(3);
+    }
+    public void LoadLevel4(){
+        SceneManager.LoadScene(4);
     }
     public void QuitGame()
     {
