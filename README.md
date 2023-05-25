@@ -9,10 +9,10 @@ As part of the Game Jam, we were given some fun restrictions:
   - Nothing in the game could be harmed
   - Include a mute button that makes the screen go black
   - There must be poorly translated subtitles for every sound effect
-  - Include a prominent animation made in MS paint
+  - Include a prominent animation made in MS Paint
   
   
-Jacob Antepli (JacobAntepli) was the lead programmer and designer. William Smith (smithwm210) contributed with programming and level design. Sarah Bodkin (s-bod) and Zack Adams (zadams111) were the lead artists.
+Jacob Antepli (JacobAntepli) was the lead programmer and designer. William Smith (smithwm210) contributed with programming and level design. Sarah Bodkin (s-bod) and Zach Adams (zadams111) were the lead artists.
 
 
 Made in Unity
