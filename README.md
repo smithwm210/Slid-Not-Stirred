@@ -3,7 +3,7 @@
 A loyal glass of alcohol must dodge obstacles to get back to the bartender
 
 
-The winning game of IGDA WPI's Cutthroat Game Jam, whose theme was Don't Stop!
+The winning game of IGDA WPI's Cutthroat Game Jam, which had the theme Don't Stop!
 As part of the Game Jam, we were given some fun restrictions:
   - All sound effects had to originate from our voices
   - Nothing in the game could be harmed
